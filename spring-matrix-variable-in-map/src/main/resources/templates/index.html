@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Matrix Variable in a map</title>
+</head>
+<body>
+	<div th:if="${not #lists.isEmpty(matrixVars)}">
+	    <table>
+	        <tr th:each="var : ${matrixVars}">
+	            <td th:text="${var.value}"></td>
+	        </tr>
+	    </table>
+	</div>
+	
+	<div th:if="${not #lists.isEmpty(reportMatrixVars)}">
+	    <table>
+	        <tr th:each="var : ${reportMatrixVars}">
+	            <td th:text="${var.value}"></td>
+	        </tr>
+	    </table>
+	</div>
+</body>
+</html>
