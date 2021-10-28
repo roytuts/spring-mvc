@@ -1,0 +1,1 @@
+Please follow the tutorial https://roytuts.com/deploy-web-application-in-jetty-container-in-embedded-mode/

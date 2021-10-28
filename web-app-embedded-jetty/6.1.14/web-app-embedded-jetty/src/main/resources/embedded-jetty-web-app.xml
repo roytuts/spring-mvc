@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- create a bean for Jetty Server -->
+	<!-- start method will start the server -->
+	<!-- stop method will shut down the server -->
+	<bean id="jettyServer" class="org.mortbay.jetty.Server"
+		init-method="start" destroy-method="stop">
+		<!-- define thread pool -->
+		<property name="threadPool">
+			<bean id="ThreadPool" class="org.mortbay.thread.QueuedThreadPool">
+				<constructor-arg value="5" />
+			</bean>
+		</property>
+		
+		<property name="connectors">
+			<list>
+				<bean id="Connector" class="org.mortbay.jetty.nio.SelectChannelConnector">
+					<property name="port" value="9090" />
+					<property name="maxIdleTime" value="30000" />
+					<property name="acceptors" value="2" />
+					<property name="confidentialPort" value="0" />
+				</bean>
+			</list>
+		</property>
+		
+		<property name="handlers">
+			<list>
+				<ref bean="webapp" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="webapp" class="org.mortbay.jetty.webapp.WebAppContext">
+		<!-- resource webapp location -->
+		<property name="resourceBase" value="src/main/webapp" />
+		<!-- deployment descriptor location -->
+		<property name="descriptor" value="WEB-INF/web.xml" />
+		<!-- define context path -->
+		<property name="contextPath" value="/EmbeddedJettyWebApp" />
+	</bean>
+</beans>
