@@ -12,7 +12,7 @@ public class HelloWorldController {
 
 	@GetMapping("/hello/{msg}")
 	public String helloWorld(@PathVariable String msg, Model model) {
-		model.addAttribute("today", LocalDateTime.now());
+		//model.addAttribute("today", LocalDateTime.now());
 		model.addAttribute("msg", msg);
 
 		return "hello";
