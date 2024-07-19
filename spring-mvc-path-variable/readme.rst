@@ -1,1 +1,1 @@
-Please follow the tutorial https://www.roytuts.com/spring-web-mvc-pathvariable/
+Please follow the tutorial https://roytuts.com/spring-web-mvc-pathvariable/
