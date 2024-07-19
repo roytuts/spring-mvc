@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/spring-web-mvc-pathvariable-with-regular-expressions/
+Please follow the tutorial https://roytuts.com/spring-web-mvc-pathvariable-with-regular-expressions/
