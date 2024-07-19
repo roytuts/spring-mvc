@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/
+Please follow the tutorial https://roytuts.com/spring-matrixvariable-at-specific-position-in-a-url/
