@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/spring-mvc-multiple-files-upload-example/
+Please follow the tutorial https://roytuts.com/spring-mvc-multiple-files-upload-example/
